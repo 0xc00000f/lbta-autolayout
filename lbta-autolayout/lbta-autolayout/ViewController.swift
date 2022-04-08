@@ -7,7 +7,14 @@
 
 import UIKit
 
+extension UIColor {
+    static var mainPink = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
+}
+
 class ViewController: UIViewController {
+
+
+
 
     let bearImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "bear_first"))
@@ -33,12 +40,45 @@ class ViewController: UIViewController {
         return textView
     }()
 
+    private let previousButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("PREV", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(.gray, for: .normal)
+        return button
+    }()
+
+    private let nextButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("NEXT", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        let pinkColor = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
+        button.setTitleColor(pinkColor, for: .normal)
+
+        return button
+    }()
+
+    private let pageControl: UIPageControl = {
+        let pc = UIPageControl()
+        pc.currentPage = 0
+        pc.numberOfPages = 4
+
+        pc.currentPageIndicatorTintColor = .mainPink
+        pc.pageIndicatorTintColor = UIColor(red: 249/255, green: 207/255, blue: 224/255, alpha: 1)
+        return pc
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         //view.addSubview(bearImageView)
         view.addSubview(descriptionTextView)
 
+
+        setupBottomControls()
         setupLayout()
 
     }
@@ -63,6 +103,26 @@ class ViewController: UIViewController {
         descriptionTextView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 24).isActive = true
         descriptionTextView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -24).isActive = true
         descriptionTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+    }
+
+    fileprivate func setupBottomControls() {
+
+        let greenView = UIView()
+        greenView.backgroundColor = .green
+
+
+        let bottomControlStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
+        bottomControlStackView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bottomControlStackView)
+        bottomControlStackView.distribution = .fillEqually
+
+        NSLayoutConstraint.activate([
+//            previousButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            bottomControlStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bottomControlStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            bottomControlStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            bottomControlStackView.heightAnchor.constraint(equalToConstant: 50)
+        ])
     }
 
 
