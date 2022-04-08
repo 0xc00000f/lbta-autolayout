@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D76C91E02800DD2400B6B381 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C91DF2800DD2400B6B381 /* Page.swift */; };
 		D7E2946E27FE52A5008D78F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E2946D27FE52A5008D78F6 /* AppDelegate.swift */; };
 		D7E2947227FE52A5008D78F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E2947127FE52A5008D78F6 /* ViewController.swift */; };
 		D7E2947527FE52A5008D78F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E2947327FE52A5008D78F6 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D76C91DF2800DD2400B6B381 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		D7E2946A27FE52A5008D78F6 /* lbta-autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lbta-autolayout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E2946D27FE52A5008D78F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7E2947127FE52A5008D78F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				D7E2946D27FE52A5008D78F6 /* AppDelegate.swift */,
 				D7E833F728008F3D004CDC31 /* SwipingController.swift */,
+				D76C91DF2800DD2400B6B381 /* Page.swift */,
 				D7E833F928009492004CDC31 /* PageCell.swift */,
 				D7E2947127FE52A5008D78F6 /* ViewController.swift */,
 				D7E2947327FE52A5008D78F6 /* Main.storyboard */,
@@ -145,6 +148,7 @@
 				D7E2946E27FE52A5008D78F6 /* AppDelegate.swift in Sources */,
 				D7E833FA28009492004CDC31 /* PageCell.swift in Sources */,
 				D7E833F828008F3D004CDC31 /* SwipingController.swift in Sources */,
+				D76C91E02800DD2400B6B381 /* Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
