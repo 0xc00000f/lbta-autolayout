@@ -117,7 +117,6 @@ class ViewController: UIViewController {
         bottomControlStackView.distribution = .fillEqually
 
         NSLayoutConstraint.activate([
-//            previousButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             bottomControlStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             bottomControlStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             bottomControlStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
