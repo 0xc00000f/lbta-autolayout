@@ -20,6 +20,8 @@ class PageCell: UICollectionViewCell {
 
             descriptionTextView.attributedText = attributedText
             descriptionTextView.textAlignment = .center
+            descriptionTextView.isEditable = false
+            descriptionTextView.isScrollEnabled = false
         }
     }
 
@@ -32,11 +34,7 @@ class PageCell: UICollectionViewCell {
 
     private let descriptionTextView: UITextView = {
         let textView = UITextView()
-
         textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.textAlignment = .center
-        textView.isEditable = false
-        textView.isScrollEnabled = false
         return textView
     }()
 
